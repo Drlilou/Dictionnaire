@@ -74,12 +74,16 @@ public class Home1 extends java.awt.Frame {
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
 
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setSelected(true);
@@ -93,26 +97,34 @@ public class Home1 extends java.awt.Frame {
         });
         setLayout(null);
 
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Operation"));
         jPanel1.setLayout(null);
         jPanel1.add(jTextField1);
-        jTextField1.setBounds(20, 40, 190, 22);
+        jTextField1.setBounds(70, 40, 170, 22);
 
         jRadioButton1.setText("ajouter");
         jPanel1.add(jRadioButton1);
-        jRadioButton1.setBounds(10, 90, 110, 21);
+        jRadioButton1.setBounds(20, 90, 110, 21);
 
         jRadioButton2.setText("suprimer");
         jPanel1.add(jRadioButton2);
         jRadioButton2.setBounds(130, 90, 98, 21);
 
+        jButton1.setBackground(new java.awt.Color(0, 0, 102));
+        jButton1.setForeground(new java.awt.Color(0, 0, 102));
         jButton1.setText("excuter");
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(50, 150, 140, 23);
+        jButton1.setBounds(60, 150, 140, 20);
+
+        jLabel2.setText("Mot");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(30, 40, 50, 20);
 
         add(jPanel1);
         jPanel1.setBounds(310, 140, 250, 190);
@@ -123,26 +135,31 @@ public class Home1 extends java.awt.Frame {
             }
         });
         add(jTextField2);
-        jTextField2.setBounds(40, 80, 130, 22);
+        jTextField2.setBounds(70, 80, 140, 22);
 
-        jButton2.setText("verifier");
+        jButton2.setBackground(new java.awt.Color(0, 0, 153));
+        jButton2.setForeground(new java.awt.Color(0, 0, 102));
+        jButton2.setText("Acceuil");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         add(jButton2);
-        jButton2.setBounds(182, 80, 100, 23);
+        jButton2.setBounds(370, 330, 90, 23);
 
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(50, 150, 220, 160);
+        jScrollPane1.setBounds(50, 150, 220, 150);
 
+        jButton3.setBackground(new java.awt.Color(0, 0, 153));
+        jButton3.setForeground(new java.awt.Color(0, 0, 102));
         jButton3.setText("Afficher dictionnaire");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,11 +167,37 @@ public class Home1 extends java.awt.Frame {
             }
         });
         add(jButton3);
-        jButton3.setBounds(40, 50, 240, 23);
+        jButton3.setBounds(40, 50, 260, 23);
 
         jLabel1.setText("Contenu de Dictionnaire");
         add(jLabel1);
         jLabel1.setBounds(50, 120, 210, 16);
+
+        jLabel3.setText("Mot");
+        add(jLabel3);
+        jLabel3.setBounds(40, 80, 50, 20);
+
+        jButton4.setBackground(new java.awt.Color(204, 0, 0));
+        jButton4.setForeground(new java.awt.Color(204, 0, 0));
+        jButton4.setText("Quitter");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        add(jButton4);
+        jButton4.setBounds(470, 330, 100, 23);
+
+        jButton5.setBackground(new java.awt.Color(0, 0, 153));
+        jButton5.setForeground(new java.awt.Color(0, 0, 102));
+        jButton5.setText("verifier");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        add(jButton5);
+        jButton5.setBounds(210, 80, 90, 23);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -224,6 +267,25 @@ public class Home1 extends java.awt.Frame {
     }//GEN-LAST:event_jTextField2KeyPressed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        dispose();
+        new Frame1().setVisible(true);
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        fillTable();        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        int i = JOptionPane.showConfirmDialog(this, "ar you sur  ??", "Quitr", JOptionPane.YES_NO_OPTION);
+        if (i == 0) {
+            System.exit(-1);
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         try {
             String query = "select * from word where word like '%" + jTextField2.getText() + "%'";
             java.sql.PreparedStatement ps = ConnectionBDD.getConnection().prepareStatement(query);
@@ -231,23 +293,16 @@ public class Home1 extends java.awt.Frame {
             java.sql.ResultSet rs = ps.executeQuery();
             String text = "";
             while (rs.next()) {
-                text += rs.getString("word") + "\n";
 
+                String word = rs.getString("word");
+                text += word + "\n";
             }
             jTextArea1.setText(text);
-//            jTable1.setModel(DbUtils.resultSetToTableModel(rs));
-            if (text.isEmpty()) {
-                JOptionPane.showMessageDialog(this, "mot fausse ");
-            }
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        fillTable();        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -270,7 +325,11 @@ public class Home1 extends java.awt.Frame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;

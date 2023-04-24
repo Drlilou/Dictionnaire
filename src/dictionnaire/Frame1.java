@@ -2,6 +2,11 @@ package dictionnaire;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  *
@@ -16,8 +21,8 @@ public class Frame1 extends java.awt.Frame {
         initComponents();
 
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-        this.setLocation(dim.width *1/ 4 , dim.height *1/ 4 );
-        setSize(600, 400);
+        this.setLocation(dim.width * 1 / 4, dim.height * 1 / 4);
+        setSize(700, 420);
         setResizable(false);
         setTitle("Dictionnaire");
     }
@@ -30,8 +35,14 @@ public class Frame1 extends java.awt.Frame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        label2 = new java.awt.Label();
+        label1 = new java.awt.Label();
 
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -40,18 +51,47 @@ public class Frame1 extends java.awt.Frame {
         });
         setLayout(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/acc.gif"))); // NOI18N
-        add(jLabel1);
-        jLabel1.setBounds(0, 40, 531, 370);
-
-        jButton1.setText("Demarer");
+        jButton1.setText("Start");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         add(jButton1);
-        jButton1.setBounds(360, 320, 150, 23);
+        jButton1.setBounds(350, 350, 110, 23);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/univ.png"))); // NOI18N
+        add(jLabel2);
+        jLabel2.setBounds(140, 0, 740, 170);
+
+        jButton2.setText("Quit");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        add(jButton2);
+        jButton2.setBounds(480, 350, 110, 23);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/acc.gif"))); // NOI18N
+        add(jLabel1);
+        jLabel1.setBounds(10, 20, 390, 460);
+
+        jLabel3.setText("Annee univeristaire : 2022-2023");
+        add(jLabel3);
+        jLabel3.setBounds(340, 390, 310, 16);
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Realisé par "));
+        jPanel1.setLayout(new java.awt.GridLayout(2, 1));
+
+        label2.setText("Benbekrit Fatna");
+        jPanel1.add(label2);
+
+        label1.setText("Ghrib Feriel");
+        jPanel1.add(label1);
+
+        add(jPanel1);
+        jPanel1.setBounds(410, 220, 180, 120);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -69,10 +109,27 @@ public class Frame1 extends java.awt.Frame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        int i = JOptionPane.showConfirmDialog(this, "ar you sur  ??","Quitr",JOptionPane.YES_NO_OPTION);
+        if (i == 0)
+            System.exit(-1);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Frame1.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(Frame1.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(Frame1.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (UnsupportedLookAndFeelException ex) {
+            Logger.getLogger(Frame1.class.getName()).log(Level.SEVERE, null, ex);
+        }
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Frame1().setVisible(true);
@@ -83,6 +140,12 @@ public class Frame1 extends java.awt.Frame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
+    private java.awt.Label label1;
+    private java.awt.Label label2;
     // End of variables declaration//GEN-END:variables
 }
